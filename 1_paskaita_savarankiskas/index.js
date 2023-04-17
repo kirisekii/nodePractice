@@ -36,7 +36,7 @@ app.get('/randomPlaces', (req, res) => {
         const place = {
             country: casual.country,
             city: casual.city,
-            address: casual.street + casual.address2
+            address: `${casual.street} ${casual.address2}`
         };
         places.push(place);
     }
