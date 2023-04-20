@@ -13,18 +13,18 @@ app.get('/', (req, res) => {
     res.send(data);
 });
 
+app.get('/products/:id', (req, res) => {
+    const id = Number(req.params.id);
+    const foundProduct = data.find((product) => product.id === Number(id));
+    res.send(foundProduct);
+});
+
 app.get('/products/:category', (req, res) => {
     const category = slugify(req.params.category);
     const filteredProducts = data.filter(
         (product) => slugify(product.category.toLowerCase()) === category
     );
     res.send(filteredProducts);
-});
-
-app.get('/products/:id', (req, res) => {
-    const id = Number(req.params.id);
-    const foundProduct = data.find((product) => product.id === Number(id));
-    res.send(foundProduct);
 });
 
 app.get('/names', (req, res) => {
