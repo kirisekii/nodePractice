@@ -9,38 +9,44 @@
   </head>
   <body>
     <nav>
-        <div><a href="http://127.0.0.1:5500/atsiskaitymas/client/index.html">Memberhips</a></div>
-        <div><a href="http://127.0.0.1:5500/atsiskaitymas/client/users.html">Users</a></div>  
+      <div>
+        <a href="http://127.0.0.1:5500/atsiskaitymas/client/index.html"
+          >Memberships</a
+        >
+      </div>
+      <div>
+        <a href="http://127.0.0.1:5500/atsiskaitymas/client/users.html"
+          >Users</a
+        >
+      </div>
     </nav>
 
     <main>
-        <div class="first">
-            <div>
-                <h1>User Management</h1> 
-            </div>
-                <button><a href="http://127.0.0.1:5500/atsiskaitymas/client/newUser.html">+ New User</a></button>
-            </div>
-        </div>
-
-        <div class="sort">
-            <select name="sort" id="sort">
-                <option value="">Sorting By Name ASC</option>
-                <option value="first">A-Z</option>
-                <option value="second">Z-A</option>
-
-            </select>
+      <div class="first">
         <div>
-
-
-        <div class="cards">
-
+          <h1>User Management</h1>
         </div>
- 
+        <button>
+          <a href="http://127.0.0.1:5500/atsiskaitymas/client/newUser.html"
+            >+ New User</a
+          >
+        </button>
+      </div>
+
+      <div class="sort">
+        <select name="sort" id="sort">
+          <option value="">Sorting By Name ASC</option>
+          <option value="first">A-Z</option>
+          <option value="second">Z-A</option>
+        </select>
+      </div>
+
+      <div class="cards"></div>
     </main>
 
     <footer>
-        <p id="footer">Copyright 2021 Membership Manager</p>
-      </footer>
+      <p id="footer">Copyright 2021 Membership Manager</p>
+    </footer>
 
     <script src="users.js"></script>
   </body>

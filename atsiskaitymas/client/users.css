@@ -1,3 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #edf2f6;
+  font-family: Arial, sans-serif;
+}
+
 nav {
   display: flex;
   justify-content: center;
@@ -20,31 +31,43 @@ button {
   border: none;
   width: 180px;
   height: 30px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
+
 .first {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-body {
-  background-color: #edf2f6;
-  padding: 0;
-  margin: 0;
-}
 .cards {
   display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .card {
   background-color: white;
   height: 150px;
   width: 240px;
-  padding-top: 10px;
-  padding-left: 20px;
+  padding: 10px 20px;
   text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
 }
 
 footer {
   display: flex;
   justify-content: center;
+  background-color: #f8f8f8;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+footer p {
+  font-size: 14px;
+  color: #777;
 }

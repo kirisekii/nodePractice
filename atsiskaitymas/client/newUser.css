@@ -1,3 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #edf2f6;
+  font-family: Arial, sans-serif;
+}
+
 nav {
   display: flex;
   justify-content: center;
@@ -10,9 +21,7 @@ nav div {
 }
 
 main {
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-top: 20px;
+  margin: 20px 50px;
 }
 
 .blue {
@@ -20,32 +29,88 @@ main {
   border: none;
   width: 180px;
   height: 30px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
+
 .white {
   border: none;
   width: 180px;
   height: 30px;
+  color: #555;
+  cursor: pointer;
 }
+
 .first {
   display: flex;
   justify-content: space-between;
-}
-
-body {
-  background-color: #edf2f6;
-  padding: 0;
-  margin: 0;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .card {
   background-color: white;
   height: 400px;
-  width: 1100px;
+  width: 100%;
+  max-width: 1100px;
   padding: 40px;
   text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.card label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.card input[type='text'],
+.card input[type='email'],
+.card select,
+.card textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.card select {
+  appearance: none;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='4'><polygon points='4,0 0,4 8,4'/></svg>")
+    no-repeat right #fff;
+  background-position-x: 98%;
+  background-position-y: 50%;
+  padding-right: 24px;
+  cursor: pointer;
+}
+
+.card textarea {
+  height: 100px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
 }
 
 footer {
   display: flex;
   justify-content: center;
+  background-color: #f8f8f8;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+footer p {
+  font-size: 14px;
+  color: #777;
 }
