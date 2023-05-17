@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="newMembership.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <a href="http://127.0.0.1:5500/atsiskaitymas/client/index.html"
+          >Memberhips</a
+        >
+      </div>
+      <div>
+        <a href="http://127.0.0.1:5500/atsiskaitymas/client/users.html"
+          >Users</a
+        >
+      </div>
+    </nav>
+
+    <main>
+      <div class="first">
+        <div>
+          <h1>Create Membership</h1>
+        </div>
+      </div>
+
+      <div>
+        <div class="card">
+          <form>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" />
+
+            <label for="price">Membership Price</label>
+            <input type="text" name="price" id="price" />
+
+            <label for="descripcion">Description</label>
+            <textarea
+              name="descripcion"
+              id="descripcion"
+              cols="10"
+              rows="10"
+            ></textarea>
+
+            <div class="buttons">
+              <button class="white">Cancel</button>
+              <button class="blue">New Membership</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p id="footer">Copyright 2021 Membership Manager</p>
+    </footer>
+
+    <script src="newMembership.js"></script>
+  </body>
+</html>
