@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const { MongoClient } = require('mongodb');
+const { MongoClient, ObjectId } = require('mongodb');
 
 require('dotenv').config();
 
@@ -28,16 +28,14 @@ app.get('/', async (req, res) => {
   }
 });
 
-app.get('/movies/ratingSort/:type', async (req, res) => {
+app.get('/movies/:id', async (req, res) => {
   try {
-    const { type } = req.params;
-    const sort = type === 'asc' ? 1 : -1;
+    const { id } = req.params;
     const con = await client.connect();
     const data = await con
       .db('ManoDuomenuBaze')
       .collection('movies')
-      .find()
-      .sort({ rating: sort })
+      .find(new ObjectId(id))
       .toArray();
     await con.close();
     res.send(data);
